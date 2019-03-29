@@ -1,0 +1,35 @@
+A Spring JDBC application without JPA and SPRING notifications
+
+Demonstrates:
+- CRUD operations on Spring JDBC
+- batch operations
+- attempt get single entity which does not exist
+- app layout with dao, service and spring transaction approach
+
+
+See:
+https://netsurfingzone.com/spring/spring-transaction-management-basic
+https://www.tutorialspoint.com/spring_boot/index.htm
+
+PROPAGATION:
+    Propagation.REQUIRED – Support a current transaction, create a new one if none exists.
+    Propagation.REQUIRES_NEW – Always create a new transaction and suspend the current transaction if already exist.
+    Propagation.MANDATORY – Support a current transaction, throw an exception if none exists.
+    Propagation.NESTED – Execute within a nested transaction if a current transaction exists.
+    Propagation.NEVER – Execute non-transactionally, throw an exception if a transaction exists.
+    Propagation.NOT_SUPPORTED – Execute non-transactionally, suspend the current transaction if one exists.
+    Propagation.SUPPORTS – Support a current transaction, execute non-transactionally if none exists.
+
+    
+ISOLATION:
+    Isolation.READ_UNCOMMITTED – It allows dirty reads, non-repeatable reads, and phantom reads.
+    Isolation.READ_COMMITTED – Dirty reads is prevented, allows non-repeatable and phantom reads.
+    Isolation.REPEATABLE_READ – Dirty reads and non-repeatable prevented, phantom reads allowed.
+    Isolation.SERIALIZABLE – Dirty reads, non-repeatable reads, and phantom reads are prevented.
+    
+    
+JAVA EMAIL: 
+https://www.tutorialspoint.com/spring_boot/spring_boot_sending_email.htm
+    - setup a 'from' email account eg. home.paul47@gmail.com / Bundy1990!!   
+    - unfortunately it is necessary to switch on app access to this email:
+      ==> P - Google Account - Security - Less secure app access - toggle security ON 
